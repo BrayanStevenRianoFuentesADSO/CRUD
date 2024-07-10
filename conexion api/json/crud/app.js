@@ -1,30 +1,21 @@
-// function consultar() {
-//   const data = await fetch("")
-//   const
-// }
 
-// async function click() {
-//   const data = await fetch(""), { }
-// }
 
 const consultar = async () => {
-  const solicitud = await fetch("http://localhost:3000/users")
+  const solicitud = await fetch("http://localhost:3000/users")//llama a la base de datos
   const datos = await solicitud.json()
   return datos;//.user
 }
 
 
-
-consultar().then((usuarios) => {
+ consultar().then((usuarios) => {
   
-  let cont = 0
+   let cont = 0
   
-  for (cont; cont <= usuarios.length;cont++){
-    console.log(usuarios[cont])
-  } 
+   for (cont; cont <= usuarios.length;cont++){ //// trae el objeto de cada usuarios
+     console.log(usuarios[cont])
+   } 
 
- })
-
+  })
 
 let dom = document
 // let input_id = dom.querySelector(".id")
@@ -33,32 +24,48 @@ let select_box = dom.querySelector(".tipo_doc")
 
 let button = dom.querySelector(".enviar")
 
-const enviar = async () => {
-  const solicitud = await fetch("http://localhost:3000/users", {
-    method: "post"
-  }
-    button.addEventListener
-  )
+let id =dom.querySelector(".id")
+let nombre =dom.querySelector(".nombre")
+let apellido =dom.querySelector(".apellido")
+let documento =dom.querySelector(".documento")
+let correo =dom.querySelector(".correo")
+let direccion =dom.querySelector(".direccion")
+let tipo_doc =dom.querySelector(".tipo_doc")
 
-}
 
- button.addEventListener("click", function enviar() {
-   event.preventDefault();
+let solo_nums=/^[1-9]$/
+
+
+
+id.addEventListener("keydown", function validar_num(){
   
-   input.forEach(input => {
-     if (input.value === "") {
-       console.log("no se ingresa dato")
-     }
-     else {
-       console.log(input.value)
-     }
-    
-   });
-   console.log(select_box.value)
+})
+
+ button.addEventListener("click", function enviar() {///////////////IMPRIME EN CONSOLA EL VALOR DE CADA INPUT 
+   event.preventDefault();
+   
+   
+  fetch('http://localhost:3000/users',{
+    method: 'POST',
+    body:JSON.stringify({
+      id: id.value,
+      nombre: nombre.value,
+      apellido: apellido.value,
+      documento: documento.value,
+      correo: correo.value,
+      direccion: direccion.value,
+      tipo_doc: tipo_doc.value
+    }),
+
+    headers:{
+      'content-type':'application/json',
+    },
+  })
+  
+  .then((response)=>response.json())
+  
+  console.log(select_box.value)///////////////IMPRIME EN CONSOLA CADA VALOR DEL SELECT
  })
 
-button.addEventListener("click", function enviar() {
-  event.preventDefault();
-  
 
-})
+

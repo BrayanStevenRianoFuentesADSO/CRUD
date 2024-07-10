@@ -24,7 +24,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 1em;
-  background-color: lightcoral;
+  background-color: rgb(173, 113, 213);
   border-radius: 16px;
 }
 
@@ -35,11 +35,23 @@
   border-radius: 8px;
 }
 
-.enviar{
+.button{
   width: 22%;
   height: 8%;
   border-radius: 8px;
-  background-color: lightblue;
+  background-color: rgb(179, 230, 173);
   border: none;
   font-size: 18px;
+}
+
+.editar{
+  width: 80%;
+}
+
+.eliminar{
+  background-color: rgb(227, 103, 103);
+}
+
+.modificar{
+  background-color: rgb(103, 184, 227);
 }

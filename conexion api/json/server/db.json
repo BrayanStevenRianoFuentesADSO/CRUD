@@ -26,6 +26,24 @@
       "tipo_doc": "cedula",
       "correo": "correo3@gmail.com",
       "direccion": "direccion3"
+    },
+    {
+      "id": "4",
+      "nombre": "nombre4",
+      "apellido": "apellido4",
+      "documento": "123456789",
+      "correo": "correo4",
+      "direccion": "calle4",
+      "tipo_doc": "Tarjeta de identidad"
+    },
+    {
+      "id": "jdjdjdjdjddj",
+      "nombre": "aomdsomad",
+      "apellido": "a,s",
+      "documento": "ds,sk",
+      "correo": "ñapsls",
+      "direccion": "dasks55",
+      "tipo_doc": "Tarjeta de identidad"
     }
   ]
 }

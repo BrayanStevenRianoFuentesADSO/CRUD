@@ -1,0 +1,32 @@
+
+{
+  "users": [
+    {
+      "id":1,
+      "nombre":"nombre1",
+      "apellido":"apellido1",
+      "documento":123456789,
+      "tipo_doc":"cedula1",
+      "correo":"correo1@gmail.com",
+      "direccion":"direccion1"
+    },
+    {
+      "id":2,
+      "nombre":"nombre2",
+      "apellido":"apellido2",
+      "documento":123456789,
+      "tipo_doc":"cedula2",
+      "correo":"correo2@gmail.com",
+      "direccion":"direccion2"
+    },
+    {
+      "id":3,
+      "nombre":"nombre3",
+      "apellido":"apellido3",
+      "documento":123456789,
+      "tipo_doc":"cedula3",
+      "correo":"correo3@gmail.com",
+      "direccion":"direccion3"
+    }
+  ]
+}

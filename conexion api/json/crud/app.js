@@ -1,5 +1,7 @@
 
 
+
+
 const consultar = async () => {
   const solicitud = await fetch("http://localhost:3000/users")//llama a la base de datos
   const datos = await solicitud.json()
@@ -12,7 +14,7 @@ const consultar = async () => {
    let cont = 0
   
    for (cont; cont <= usuarios.length;cont++){ //// trae el objeto de cada usuarios
-     console.log(usuarios[cont])
+    console.log
    } 
 
   })
@@ -23,6 +25,7 @@ let input = dom.querySelectorAll("input")
 let select_box = dom.querySelector(".tipo_doc")
 
 let guardar = dom.querySelector(".enviar")
+
 
 let id =dom.querySelector(".id")
 let nombre =dom.querySelector(".nombre")
@@ -43,11 +46,21 @@ let solo_nums=/^[1-9]$/
 
  guardar.addEventListener("click", function enviar() {///////////////IMPRIME EN CONSOLA EL VALOR DE CADA INPUT 
    event.preventDefault();
-   
-   
-  fetch('http://localhost:3000/users',{
-    method: 'POST',
-    body:JSON.stringify({
+  
+  let valido=true
+  
+  input.forEach(element => {
+    if(element.value===""){
+      valido=false
+    }
+    
+  });
+
+
+  console.log(valido)
+  if(valido==true){
+    const data={
+
       id: id.value,
       nombre: nombre.value,
       apellido: apellido.value,
@@ -55,32 +68,52 @@ let solo_nums=/^[1-9]$/
       correo: correo.value,
       direccion: direccion.value,
       tipo_doc: tipo_doc.value
-    }),
+    
+      }
+    
+      fetch('http://localhost:3000/users',{
+        method: 'POST',
+        body: JSON.stringify({
+        data
+        }),
+        headers:{
+          'content-type':'application/json',
+        },
+      })
+  }
+  
+  
 
-    headers:{
-      'content-type':'application/json',
-    },
-  })
+  // fetch('http://localhost:3000/users',{
+  //   method: 'POST',
+
+  //   body:JSON.stringify({
+  //     id: id.value,
+  //     nombre: nombre.value,
+  //     apellido: apellido.value,
+  //     documento: documento.value,
+  //     correo: correo.value,
+  //     direccion: direccion.value,
+  //     tipo_doc: tipo_doc.value
+  //   }),
+
+  //   headers:{
+  //     'content-type':'application/json',
+  //   },
+  // })
   
-  .then((response)=>response.json())
+
   
-  console.log(select_box.value)///////////////IMPRIME EN CONSOLA CADA VALOR DEL SELECT
+
+
+//   .then((response)=>response.json())
+//   console.log(select_box.value)///////////////IMPRIME EN CONSOLA CADA VALOR DEL SELECT
+//  })
+///////////////IMPRIME EN CONSOLA CADA VALOR DEL SELECT
  })
 
 
-eliminar.addEventListener("click", function eliminar(){
-  event.preventDefault();
 
-  let cont=0
-  for (cont;cont<=consultar.length;cont++){
-    if(editar)
-    fetch(`http://localhost:3000/${users.id[cont]}`,{
-      method: 'DELETE'
-    })
-  }
-
-  
-})
 
 
 

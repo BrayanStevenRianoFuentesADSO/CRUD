@@ -1,49 +1,16 @@
 {
   "users": [
     {
-      "id": 1,
-      "nombre": "nombre1",
-      "apellido": "apellido1",
-      "documento": 123456789,
-      "tipo_doc": "cedula",
-      "correo": "correo1@gmail.com",
-      "direccion": "direccion1"
-    },
-    {
-      "id": 2,
-      "nombre": "nombre2",
-      "apellido": "apellido2",
-      "documento": 123456789,
-      "tipo_doc": "cedula",
-      "correo": "correo2@gmail.com",
-      "direccion": "direccion2"
-    },
-    {
-      "id": 3,
-      "nombre": "nombre3",
-      "apellido": "apellido3",
-      "documento": 123456789,
-      "tipo_doc": "cedula",
-      "correo": "correo3@gmail.com",
-      "direccion": "direccion3"
-    },
-    {
-      "id": "4",
-      "nombre": "nombre4",
-      "apellido": "apellido4",
-      "documento": "123456789",
-      "correo": "correo4",
-      "direccion": "calle4",
-      "tipo_doc": "Tarjeta de identidad"
-    },
-    {
-      "id": "jdjdjdjdjddj",
-      "nombre": "aomdsomad",
-      "apellido": "a,s",
-      "documento": "ds,sk",
-      "correo": "ñapsls",
-      "direccion": "dasks55",
-      "tipo_doc": "Tarjeta de identidad"
+      "id": "9cb1",
+      "data": {
+        "id": "asdad",
+        "nombre": "adsad",
+        "apellido": "asdad",
+        "documento": "dadsad",
+        "correo": "sadsadsa@gmail.com",
+        "direccion": "adsad",
+        "tipo_doc": "Cedula de ciudadania"
+      }
     }
   ]
 }
